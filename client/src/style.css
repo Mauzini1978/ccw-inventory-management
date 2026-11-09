@@ -1,0 +1,9 @@
+/*
+ * Tailwind CSS v4 entry point.
+ * Preflight (Tailwind's base reset) is intentionally omitted so the existing
+ * custom CSS in App.vue and the views keeps rendering as before.
+ * To enable it later, replace the imports below with: @import "tailwindcss";
+ */
+@layer theme, base, components, utilities;
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/utilities.css" layer(utilities);
