@@ -6,6 +6,7 @@ export default {
     orders: 'Orders',
     finance: 'Finance',
     demandForecast: 'Demand Forecast',
+    restocking: 'Restocking',
     companyName: 'Catalyst Components',
     subtitle: 'Inventory Management System'
   },
@@ -186,6 +187,64 @@ export default {
       trend: 'Trend',
       period: 'Period'
     }
+  },
+
+  // Restocking
+  restocking: {
+    title: 'Restocking Plan',
+    description: 'Allocate a purchasing budget to the items that need restocking most urgently',
+    budgetLabel: 'Budget (USD)',
+    budgetPlaceholder: 'Enter budget',
+    usdNote: 'Budget is always entered in USD. Amounts below are shown in yen.',
+    presetsLabel: 'Presets',
+    horizonLabel: 'Planning horizon',
+    horizonDays: '{days} days',
+    invalidBudget: 'Enter a budget greater than 0.',
+    budgetTooLarge: 'Budget must not exceed $100,000,000.',
+    loadError: 'Failed to load the restocking plan. Please try again.',
+    updating: 'Updating plan...',
+    summary: {
+      budget: 'Budget',
+      allocated: 'Allocated',
+      remaining: 'Remaining',
+      funded: 'Fully funded',
+      partial: 'Partially funded',
+      unfunded: 'Unfunded',
+      totalNeeded: 'Budget needed to fund everything'
+    },
+    allocation: {
+      title: 'Budget Allocation',
+      allocated: 'Allocated',
+      remaining: 'Remaining',
+      ofBudget: '{percent}% of budget',
+      coverage: '{percent}% of the total needed is covered'
+    },
+    tableTitle: 'Prioritized Items',
+    table: {
+      rank: 'Rank',
+      sku: 'SKU',
+      itemName: 'Item Name',
+      warehouse: 'Warehouse',
+      onHand: 'On Hand',
+      reorderPoint: 'Reorder Point',
+      daysOfCover: 'Days of Cover',
+      recommendedQty: 'Recommended Qty',
+      fundedQty: 'Funded Qty',
+      cost: 'Cost',
+      status: 'Status',
+      reasons: 'Reasons'
+    },
+    statuses: {
+      funded: 'Funded',
+      partial: 'Partial',
+      unfunded: 'Unfunded'
+    },
+    reasons: {
+      below_reorder_point: 'Below reorder point',
+      low_cover: 'Low cover',
+      demand_increasing: 'Demand increasing'
+    },
+    empty: 'Nothing needs restocking for the current filters.'
   },
 
   // Filters

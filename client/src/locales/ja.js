@@ -6,6 +6,7 @@ export default {
     orders: '注文',
     finance: '財務',
     demandForecast: '需要予測',
+    restocking: '補充計画',
     companyName: '触媒コンポーネンツ',
     subtitle: '在庫管理システム'
   },
@@ -186,6 +187,64 @@ export default {
       trend: 'トレンド',
       period: '期間'
     }
+  },
+
+  // Restocking
+  restocking: {
+    title: '補充計画',
+    description: '購買予算を、補充の緊急度が高い品目から順に配分します',
+    budgetLabel: '予算(USD)',
+    budgetPlaceholder: '予算を入力',
+    usdNote: '予算は常に米ドル(USD)で入力してください。以下の金額は円で表示されます。',
+    presetsLabel: 'プリセット',
+    horizonLabel: '計画期間',
+    horizonDays: '{days}日間',
+    invalidBudget: '0より大きい予算を入力してください。',
+    budgetTooLarge: '予算は$100,000,000以下にしてください。',
+    loadError: '補充計画を読み込めませんでした。もう一度お試しください。',
+    updating: '計画を更新中...',
+    summary: {
+      budget: '予算',
+      allocated: '配分済み',
+      remaining: '残予算',
+      funded: '全額手当済み',
+      partial: '一部手当済み',
+      unfunded: '未手当',
+      totalNeeded: '全品目を手当てするのに必要な予算'
+    },
+    allocation: {
+      title: '予算配分',
+      allocated: '配分済み',
+      remaining: '残り',
+      ofBudget: '予算の{percent}%',
+      coverage: '必要総額の{percent}%をカバー'
+    },
+    tableTitle: '優先順位付き品目',
+    table: {
+      rank: '順位',
+      sku: 'SKU',
+      itemName: '品目名',
+      warehouse: '倉庫',
+      onHand: '現在庫',
+      reorderPoint: '発注点',
+      daysOfCover: '在庫日数',
+      recommendedQty: '推奨数量',
+      fundedQty: '手当数量',
+      cost: 'コスト',
+      status: 'ステータス',
+      reasons: '理由'
+    },
+    statuses: {
+      funded: '全額手当',
+      partial: '一部手当',
+      unfunded: '未手当'
+    },
+    reasons: {
+      below_reorder_point: '発注点を下回る',
+      low_cover: '在庫日数が少ない',
+      demand_increasing: '需要増加'
+    },
+    empty: '現在のフィルターでは補充が必要な品目はありません。'
   },
 
   // Filters

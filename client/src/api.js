@@ -12,6 +12,17 @@ export const api = {
     return response.data
   },
 
+  async getRestockingPlan({ budget, horizonDays = 30, warehouse, category } = {}) {
+    const params = new URLSearchParams()
+    params.append('budget', String(budget))
+    params.append('horizon_days', String(horizonDays))
+    if (warehouse && warehouse !== 'all') params.append('warehouse', warehouse)
+    if (category && category !== 'all') params.append('category', category)
+
+    const response = await axios.get(`${API_BASE_URL}/restocking/plan?${params.toString()}`)
+    return response.data
+  },
+
   async getInventoryItem(id) {
     const response = await axios.get(`${API_BASE_URL}/inventory/${id}`)
     return response.data
